@@ -1,0 +1,39 @@
+.form-container {
+    width: 500px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+  }
+
+  #signupHeading{
+    text-align: center;
+    margin-top: 20px;
+  }
+  .form-container input,
+  .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .form-container .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  .form-container input[type="submit"] {
+    background-color: #ffc107;
+    color: #1d2327;
+    cursor: pointer;
+  }
+  .form-container input[type="submit"]:hover {
+    background-color: #1d2327;
+    color: #ffc107;
+    cursor: pointer;
+  }

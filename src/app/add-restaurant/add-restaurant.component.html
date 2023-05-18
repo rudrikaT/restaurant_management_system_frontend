@@ -1,0 +1,24 @@
+<div class="container">
+<button (click)="addRestaurant()" class="btn btn-md btn-primary" style="padding: 8px;">Add Restaurant</button>
+<form *ngIf="showform" (submit)="addnewRestaurant()" style="width: 50vw; margin: auto; margin-bottom: 10px; font-size: 14px;">
+    <h2 style="text-align: center;">Add Restaurant</h2><br><br>
+    <label>Name:</label>
+    <input type="text" name="name" [(ngModel)]="newRestaurant.rname" class="form-control"><br><br>
+    <label>Location:</label>
+    <input type="text" name="location" [(ngModel)]="newRestaurant.rlocation" class="form-control"><br><br>
+    <label>contact No:</label>
+    <input type="text" name="contactno" [(ngModel)]="newRestaurant.rcontactno" class="form-control"><br><br>
+    <label>Image:</label>
+    <input type="text" name="image" [(ngModel)]="newRestaurant.image" class="form-control"><br><br>
+    <label>Rating:</label>
+    <input type="text" name="rating" [(ngModel)]="newRestaurant.rating" class="form-control"><br><br>
+    <label>Total Seats:</label>
+    <input type="text" name="totalseats" [(ngModel)]="newRestaurant.totalseats" class="form-control"><br><br>
+    <label>Seats Available:</label>
+    <input type="text" name="seatsavailable" [(ngModel)]="newRestaurant.seatsavailable" class="form-control"><br><br>
+    <label>Restaurant Category Id:</label>
+    <input type="text" name="rcid" [(ngModel)]="newRestaurant.rcid"><br><br>
+    <button type="submit" class="btn btn-primary btn-md" style="padding: 8px;">Add Restaurant</button>
+    <button type="button" class="btn btn-danger" (click)="showform = false" style="padding: 8px; margin-left: 5px; background-color: crimson;">Cancel</button>
+</form>
+</div>

@@ -1,0 +1,26 @@
+<form (submit)="BookRestaurant()" ngNativeValidate class="center-form">
+    <label>Restaurant Name</label>
+    <input type="text" name="restname" [(ngModel)]="restaurant.rname" readonly="readonly"><br><br>
+    <label>Seats Avialable</label>
+    <input type="text" name="seatsavailable" [(ngModel)]="restaurant.seatsavailable" readonly="readonly"><br><br>
+    <label>Seats To Be Booked</label>
+    <div *ngIf="seatsbooked.errors?.['max'] && seatsbooked.touched">Enter seats less than available</div>
+    <input type="number" name="seatsbooked" #seatsbooked="ngModel" [(ngModel)]="booking.seatstobebooked" max="{{restaurant.seatsavailable}}" ngModel required>
+
+    
+    <!-- <input type="text" name="seatsbooked" [(ngModel)]="booking.seatstobebooked" required> -->
+    
+    
+    <br><br>
+    <label>Start Time</label>
+    <input type="text" name="starttime" [(ngModel)]="booking.startTime" required><br><br>
+    <label>End Time</label>
+    <input type="text" name="endtime" [(ngModel)]="booking.endTime" required><br><br>
+    <button class="btn btn-md btn-primary" type="submit">Confirm Booking</button>
+    <button class="btn btn-danger btn-md" (click)="cancel()">Cancel</button>
+</form>
+
+<div class="content">
+          
+    <router-outlet></router-outlet>
+</div>

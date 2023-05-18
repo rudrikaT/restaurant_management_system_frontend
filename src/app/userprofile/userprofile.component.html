@@ -1,0 +1,16 @@
+<form (submit)="updateUser()" >
+    <label>User Name</label><br>
+    <input type="text" name="uname" [(ngModel)]="loggedInUser.uname" class="form-control" required><br><br>
+    <label>Email</label><br>
+    <input type="text" name="uemail" [(ngModel)]="loggedInUser.uemail" class="form-control" required><br><br>
+    <label>Address</label><br>
+    <input type="text" name="uaddress" [(ngModel)]="loggedInUser.uaddress"  class="form-control" required><br><br>
+    <label>Security Question</label><br>
+    <input type="text" name="secQue" [(ngModel)]="loggedInUser.securityQuestion" class="form-control" required><br><br>
+    <label>Security Answer</label><br>
+    <input type="text" name="secAns" [(ngModel)]="loggedInUser.securityAnswer" class="form-control" required><br><br>
+    <!-- <button (click)="viewBookings()" class="btn btn-md btn-primary">View Bookings</button><br><br> -->
+    <button type="submit" class="btn btn-md btn-primary">Update</button>&nbsp;
+    <!-- <button (click)="cancel()" class="btn btn-md btn-primary">Cancel</button><br><br>
+    <button (click)="homePage()" class="btn btn-md btn-primary">Home Page</button><br><br> -->
+</form>

@@ -1,0 +1,16 @@
+form{
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+button{
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:#ffc107;
+    color: black;
+  }
+button:hover{
+    background-color: #24292e;
+    color: #ffc107;
+  }

@@ -1,0 +1,50 @@
+<input [(ngModel)]="searchTerm" (input)="searchByCategoryName()" type="text" class="form-control" id="searchBar"
+    placeholder="Search by Category Name">
+
+<table class="table table-condensed table-stripped table-bordered category-table">
+    <thead>
+        <tr>
+            <th>Category Id</th>
+            <th>Category Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of filteredCategories">
+            <td>{{c.rcid}}</td>
+            <td>{{c.rcname}}</td>
+            <td>
+                <button (click)="delCategory(c.rcid)" class="btn btn-danger" id="deleteBtn" style="background-color: crimson;">Delete</button>
+                <button (click)="editCategory(c)" class="btn btn-primary" id="editBtn">Edit</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+
+<!-- Adding new category -->
+<div id="btnDiv">
+    <!-- <button (click)="addCategory()" class="btn btn-primary btn-md">Add New Category</button> -->
+</div>
+<br><br>
+
+<form *ngIf="showForm" (submit)="addNewCategory()" id="addCategoryForm">
+    <h2 style="text-align: center;">Add New Category</h2>
+    <label>Restaurant Category Name:</label>
+    <input [(ngModel)]="newcategory.rcname" name="name" type="text" class="form-control"><br>
+
+    <button type="submit" class="btn btn-primary btn-md" >Add Category</button>
+    <button type="button" class="btn btn-danger" (click)="cancelAddCategory()"
+        style="margin-left: 5px;">Cancel</button>
+</form>
+
+<!-- updating category form -->
+<form *ngIf="editingCategory" (submit)="updateCategory()" id="updateForm">
+    <h2 style="text-align: center;">Update Category</h2>
+    <label>Restaurant Category Name:</label>
+    <input [(ngModel)]="selectedCategory.rcname" name="name" type="text" class="form-control"><br>
+    <button type="submit" class="btn btn-primary btn-md">Update Category</button>
+    <button type="button" class="btn btn-danger" (click)="cancelUpdateCategory()"
+        style="margin-left: 5px;">Cancel</button>
+</form>

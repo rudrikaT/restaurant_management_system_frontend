@@ -1,0 +1,27 @@
+<div class="container">
+    <br><br>
+    
+    <table class="table table-condensed table-stripped table-bordered">
+        <thead>
+            <th>Booking Id</th>
+            <th>Restaurant id</th>
+            <th>User Id</th>
+            <th>Seats Booked</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Rating</th>
+            <th>Cancel Booking</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of bookinglist">
+                <td>{{book.bid}}</td>
+                <td>{{book.rid}}</td>
+                <td>{{book.uid}}</td>
+                <td>{{book.seatstobebooked}}</td>
+                <td>{{book.startTime}}</td>
+                <td>{{book.endTime}}</td>
+                <td>{{book.rating}}</td>
+                <td><button (click)="deleteBooking(book.bid)" class="btn btn-danger" style="background-color: crimson;">Cancel</button></td>
+               </tr>
+        </tbody>
+    </table><br><br>

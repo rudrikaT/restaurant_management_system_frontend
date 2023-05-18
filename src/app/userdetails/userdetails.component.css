@@ -1,0 +1,18 @@
+.container{
+    width: 95%;
+    padding: 20px;
+    font-size: 18px;
+    margin: 0;
+}
+thead{
+    background-color: black;
+    color: white;
+}
+tbody{
+    background-color: #1d2327;
+    color: #ffc107;
+}
+tr:hover{
+    color: #1d2327;
+    background-color: #ffc107;
+}

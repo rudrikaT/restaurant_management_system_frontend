@@ -1,0 +1,37 @@
+.container{
+    width: 100%;
+    padding: 20px;
+}
+.category-table{
+    width: 80vw;
+    margin: auto; 
+    font-size: 18px; 
+    margin-top: 10px;
+}
+.btn{
+    padding: 5px; 
+    text-align: center;
+}
+#deleteBtn{
+    margin-right: 5px;
+    width: 30%;
+}
+#editBtn{
+    width: 30%;
+}
+#btnDiv{
+    display: flex;
+    justify-content: center;
+}
+#addCategoryForm{
+    width: 50vw; 
+    margin: auto; 
+    margin-bottom: 10px; 
+    font-size: 18px;
+}
+#updateForm{
+    width: 50vw; 
+    margin: auto; 
+    margin-bottom: 10px; 
+    font-size: 18px;
+}

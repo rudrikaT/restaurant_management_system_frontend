@@ -1,0 +1,225 @@
+/* Animations */
+
+.title-main {
+  width: 100vw;
+  display: grid;
+  
+}
+
+.title ul {
+  color: white;
+  display: flex;
+  list-style: none;
+  font-size: 40px;
+  font-weight: 500;
+  padding-left: 2.8rem;
+
+}
+.title ul li{
+  text-transform: uppercase;
+  padding-left:-0.5rem;
+  animation: light 2.0s linear infinite;
+}
+
+#navbarNav{
+  width: 100%;
+}
+
+@keyframes light{
+  0%{
+      color:crimson;
+      text-shadow: none;
+  }
+  90%{
+      color:crimson;
+      text-shadow: none;
+  }
+  100%{
+      color:white;
+      text-shadow: 0 0 0.8rem #f5efef,0 0 0.8rem ;
+  }
+
+}
+.title ul li:nth-child(1){animation-delay: 0s;}
+.title ul li:nth-child(2){animation-delay: 0.2s;}
+.title ul li:nth-child(3){animation-delay: 0.4s;}
+.title ul li:nth-child(4){animation-delay: 0.6s;}
+
+
+/* .animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.animate__fadeInDown {
+  animation-name: fadeInDown;
+}
+.animate__fadeIn {
+  animation-name: fadeIn;
+} */
+
+.animate__heartBeat {
+  animation-duration: 1s;
+  animation-name: heartBeat;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+/* Styling */
+.navbar-dark{
+  background-color: #24292e !important;
+}
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #F5A623;
+}
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4A4A4A;
+}
+.nav-link:hover{
+  color: #ffc107 !important;
+}
+.jumbotron {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 85vh;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 0;
+}
+.jumbotron h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.jumbotron p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: center;
+}
+.jumbotron button{
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color:#ffc107;
+  color: black;
+}
+.jumbotron button:hover{
+  background-color: #24292e;
+  color: #ffc107;
+}
+/* Add animation to emojis */
+/* @keyframes emojiAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1); }
+  100% { transform: scale(1); }
+} */
+/* .emoji {
+  animation: emojiAnimation 2s infinite;
+} */
+
+/* Add animation to images */
+/* @keyframes imageAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1); }
+  100% { transform: scale(1); }
+} */
+.carousel-item img {
+  /* animation: imageAnimation 2s infinite; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+/* Add styling to carousel caption */
+.carousel-caption h3 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px #888888;
+}
+.carousel-caption p {
+  font-size: 1.5em;
+  font-style: italic;
+  text-shadow: 2px 2px #888888;
+}
+
+.footer {
+  background-color: #24292e;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 30px;
+}
+.footer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(36, 41, 46, 0.8), rgba(36, 41, 46, 0.8));
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.footer span {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.footer p {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+.footer .links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.footer .links a:hover {
+  color: #ffc107;
+}
+.footer .links i {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  animation-name: bounceIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.footer .data-bottom {
+  background-color: #1d2327;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.footer .data-bottom-left {
+  font-size: 14px;
+  color: #fff;
+}
+.glyphicon {
+  margin-right: 5px;
+}

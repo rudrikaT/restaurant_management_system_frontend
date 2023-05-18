@@ -1,0 +1,11 @@
+<div class="container">
+   <h2>Login</h2>
+   <form (submit)="userexits()" ngNativeValidate>
+     <label for="email">Email:</label>
+     <input type="email" [(ngModel)]="email" name="email" placeholder="Enter Email" required><br><br>
+     <label for="password">Password:</label>
+     <input type="password" [(ngModel)]="password" name="pass" placeholder="Enter Password"required><br><br>
+     <input type="submit"  value="Login" class="btn btn-md btn-primary">
+   </form><br><br>
+   <button (click)="ForgotPassword()">Forgot Password</button>
+ </div>

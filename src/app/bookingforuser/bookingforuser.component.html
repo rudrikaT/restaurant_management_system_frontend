@@ -1,0 +1,55 @@
+<div class="container">
+    <br><br>
+    
+    <table class="table table-condensed table-stripped table-bordered">
+        <thead>
+            <th>Booking Id</th>
+            <th>Restaurant id</th>
+            <th>Seats Booked</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Rating</th>
+            <th>Edit</th>
+            <th>Cancel Booking</th>
+            <th>Add/Change Rating</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of bookinglist">
+                <td>{{book.bid}}</td>
+                <td>{{book.rid}}</td>
+                <td>{{book.seatstobebooked}}</td>
+                <td>{{book.startTime}}</td>
+                <td>{{book.endTime}}</td>
+                <td>{{book.rating}}</td>
+                <td><button (click)="editBooking(book)" class="btn btn-primary">Edit</button></td>
+                <td><button (click)="deleteBooking(book.bid)" class="btn btn-danger">Cancel</button></td>
+                <td><button (click)="ratingch(book)" class="btn btn-primary btn-md" style="padding: 8px;">Add/Change Rating</button></td>
+               </tr>
+        </tbody>
+    </table><br><br>
+
+<form *ngIf="updbooking" (submit)="updateBooking()">
+    <h2 style="text-align: center;">Update Booking Details</h2><br><br>
+    <label>Booking Id:</label>
+    <input type="text" name="bookingId" [(ngModel)]="selectedbooking.bid" class="form-control" readonly="readonly"><br><br>  
+    <label>Restaurant Id:</label>
+    <input type="text" name="RestaurantId" [(ngModel)]="selectedbooking.rid" class="form-control" readonly="readonly"><br><br>
+    <label>Seats Booked:</label>
+    <input type="text" name="Seats Booked" [(ngModel)]="selectedbooking.seatstobebooked" class="form-control" ><br><br>
+    <label>Start Time:</label>
+    <input type="text" name="StartTime" [(ngModel)]="selectedbooking.startTime" class="form-control" ><br><br>
+    <label>End Time:</label>
+    <input type="text" name="EndTime" [(ngModel)]="selectedbooking.endTime" class="form-control" ><br><br>
+   
+    <button type="submit" class="btn btn-primary btn-md" style="padding: 8px;">Update Booking</button>&nbsp;
+    <button (click)="cancel()" class="btn btn-primary btn-md" style="padding: 8px;">Cancel</button>
+</form>
+
+<form *ngIf="ratingform" (submit)="rating()">
+    <h2 style="text-align: center;">Add/ Change Rating</h2><br><br>
+    <label>Rating</label>
+    <input type="text" name="rating" [(ngModel)]="ratebooking.rating" class="form-control"><br><br>
+    <button type="submit" class="btn btn-primary btn-md" style="padding: 8px;">Rate</button>&nbsp;
+    <button (click)="cancel()" class="btn btn-primary btn-md" style="padding: 8px;">Cancel</button>
+
+</form>

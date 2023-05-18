@@ -1,0 +1,132 @@
+<html>
+
+<head>
+  <title>Bootstrap Carousel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- <a class="navbar-brand animate__animated animate__fadeInDown" href="#">FOODIES</a> -->
+  <div class="title-main"><div class="title"><ul><li>F</li><li>O</li><li>O</li><li>D</li><li>I</li><li>E</li><li>S</li></ul></div> </div>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link animate__animated animate__fadeIn" routerLink="login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link animate__animated animate__fadeIn" routerLink="signup">SignUp</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link animate__animated animate__fadeIn" routerLink="forgotpassword">Forgot Password</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="jumbotron jumbotron-fluid bg-light" style="background-image: url('assets/Images/Restaurant.jpg');">
+  <div class="container">
+    <h1 class="display-4">Welcome to Restaurant Booking System</h1>
+    <p class="lead">Please login or signup to make a reservation.</p><br>
+    <button (click)="getSignUp()">Get Started</button>
+  </div>
+</div>
+
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/Images/Poster1.jpg" alt="Slide 1">
+        <div class="carousel-caption">
+          <h3>Slide 1 <span class="glyphicon glyphicon-heart"></span></h3>
+          <p>Some text for slide 1 <span class="emoji">😃</span>.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/Images/Poster2.jpg" alt="Slide 2">
+        <div class="carousel-caption">
+          <h3>Slide 2 <span class="glyphicon glyphicon-star"></span></h3>
+          <p>Some text for slide 2 <span class="emoji">🌟</span>.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/Images/Poster3.jpg" alt="Slide 3">
+        <div class="carousel-caption">
+          <h3>Slide 3 <span class="glyphicon glyphicon-music"></span></h3>
+          <p>Some text for slide 3 <span class="emoji">🎶</span>.</p>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="animated fadeInDown delay-1s">Foodies</h3>
+        <p class="animated fadeInUp delay-2s">We are a restaurant booking system that helps connect customers with their
+          favorite local restaurants. Our mission is to make it easy for people to find and reserve tables at great
+          restaurants, whether they're looking for a romantic dinner for two or a group celebration.</p>
+      </div>
+      <div class="col-md-3">
+        <div class="links">
+          <h4 class="animated fadeInDown delay-1s">QUICK LINKS</h4>
+          <ul class="list-unstyled animated fadeInUp delay-2s">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Partners</a></li>
+            <li><a href="#">Our Branches</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="links">
+          <h4 class="animated fadeInDown delay-1s">FOLLOW US</h4>
+          <ul class="list-unstyled social-icons animated fadeInUp delay-2s">
+            <li><a href="#"><i class="fab fa-facebook"></i>&nbsp;Facebook</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i>&nbsp;Instagram</a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i>&nbsp;Youtube</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i>&nbsp;Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="data-bottom">
+    <div class="data-bottom-left">
+      <p>©2023 Foodies. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

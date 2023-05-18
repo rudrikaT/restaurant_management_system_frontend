@@ -1,0 +1,12 @@
+thead{
+    background-color: black;
+    color: white;
+}
+tbody{
+    background-color: #1d2327;
+    color: #ffc107;
+}
+tr:hover{
+    color: #1d2327;
+    background-color: #ffc107;
+}

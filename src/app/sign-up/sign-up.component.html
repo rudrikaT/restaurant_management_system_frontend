@@ -1,0 +1,39 @@
+<h2 id="signupHeading">SignUp</h2>
+<div class="form-container">
+    <form #signUpForm="ngForm" (ngSubmit)="signUpDetails(signUpForm.value)" ngNativeValidate>
+        <div *ngIf="name.errors?.['required'] && name.touched" class="error-message">Please enter a name</div>
+        <div *ngIf="name.errors?.['pattern'] && name.touched" class="error-message">Name must contain only upper and
+            lower case letters</div>
+        Name: <input type="text" name="name" placeholder="Enter Name" #name="ngModel" ngModel required pattern="^[a-zA-Z ]+$"><br><br>
+
+        <div *ngIf="email.errors?.['required'] && email.touched" class="error-message">Please enter an email address!
+        </div>
+        <div *ngIf="email.errors?.['pattern'] && email.touched" class="error-message">Invalid email address!</div>
+        Email: <input class="form-control" type="email" name="email" placeholder="Enter Unique Email" #email="ngModel" required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" ngModel><br><br>
+
+        <div *ngIf="pass.errors?.['pattern'] && pass.touched" class="error-message">Password must be of minimum eight
+            and maximum 12 characters and contain at least one uppercase letter, one lowercase letter, one number and
+            one special character!</div>
+        Password: <input type="password" name="pass" placeholder="Enter Password" #pass="ngModel" ngModel required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$"><br><br>
+
+        <!-- Address: <input type="text"  name="addr" placeholder="Enter Address" #addr="ngModel" ngModel required><br><br> -->
+
+        Address:<input type="text" (click)="getUserCity()" name="addr" placeholder="Enter Address" [(ngModel)]="address" required>
+
+
+        Security Question:
+        <select name="question" #question="ngModel" ngModel required>
+            <option disabled selected value="">Select a Security Question</option>
+            <option>What is your Pet Name?</option>
+            <option>What is your Favourite Color?</option>
+            <option>What is your Best Friend Name?</option>
+            <option>What is your Birth Location?</option>
+          </select><br><br>
+
+        Answer: <input type="text" name="ans" placeholder="Enter Answer" #ans="ngModel" ngModel required><br><br>
+
+        <input type="submit" value="Sign Up">
+    </form>
+</div>

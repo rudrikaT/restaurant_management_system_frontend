@@ -1,0 +1,81 @@
+
+
+
+<!--div class="filter-section form-select">
+    <label for="category">Category:</label>
+    <select id="category" [(ngModel)]="selectedCategory" (change)="filterRestaurants()">
+      <option value="">All</option>
+      <option *ngFor="let category of categories" [value]="category.rcid">{{ category.rcname }}</option>
+    </select>
+  </div>
+  <div class="filter-section form-select">
+    <label for="sorting">Sort By Rating</label>
+    <select id="Rating" [(ngModel)]="selectedRating" (change)="filterRestaurants()">
+      <option value="">Sort</option>
+      <option value="lowtohigh">High-to-Low</option>
+      <option value="hightolow">Low-to-High</option>
+    </select>
+  </div>
+  
+  <div class="restaurant-grid">
+      <div class="restaurant-card" *ngFor="let restaurant of filteredRestaurants">
+        <img src="assets/Images/fourth.jpg" alt="Restaurant Image">
+        <p>{{ restaurant.rname }}</p>
+        <div class="space-around">
+          <p>Location: {{ restaurant.rlocation }}</p>
+          <p>SeatsAvailable{{ restaurant.seatsavailable }}</p>
+          
+        </div>
+        <div class="space-around">
+          <p>Rating: {{ restaurant.rating }}</p>
+          <p>Contact No:{{ restaurant.rcontactno }}</p>
+        </div>
+        
+        <button class="book-now-button" (click)="booknow(restaurant.rid)">Book Now</button>
+      </div>
+    </div>-->
+
+   
+    <br><br>
+<input [(ngModel)]="searchterm" (input)="searchByRestName()" type="text" class="form-control" id="searchBar"
+    placeholder="Search by Restaurant Name"><br><br>
+
+<div class="filter-section ">
+  <label for="category">Category:</label>
+  <select id="category" [(ngModel)]="selectedCategory" (change)="filterRestaurants()">
+    <option value="">All</option>
+    <option *ngFor="let category of categories" [value]="category.rcid">{{ category.rcname }}</option>
+  </select>
+</div>
+
+<div class="filter-section ">
+  <label for="sort">Sort:</label>
+  <select id="sort" [(ngModel)]="sort" (change)="sortRestaurant()">
+    <option value="default">Default</option>
+    <option value="hightolow">Rating: High to Low</option>
+    <option value="lowtohigh">Rating: Low to High</option>
+  </select>
+</div>
+
+<div class="restaurant-grid">
+    <div class="restaurant-card" *ngFor="let restaurant of filteredRestaurants">
+      <img src={{restaurant.image}} alt="Restaurant Image">
+      <p>{{ restaurant.rname }}  </p>
+      <div class="space-around" style="margin-bottom: 5px;">
+        <p>{{ restaurant.rlocation }}</p>
+        <p>{{ getCategoryOf(restaurant.rcid) }}</p>
+      </div>
+      <div class="space-around">
+        <p>Seats available:{{ restaurant.seatsavailable}}</p>
+        <p>Rating:{{restaurant.rating}}</p>
+      </div>
+      
+      <button class="book-now-button" (click)="booknow(restaurant.rid)">Book Now</button>
+    </div>
+  </div>
+  <div class="content">
+          
+    <router-outlet></router-outlet>
+</div>
+
+  

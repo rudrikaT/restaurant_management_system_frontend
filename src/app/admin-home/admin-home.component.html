@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<div class="wrapper">
+    <!-- side bar-->
+    <nav class="sidebar" id="sidebar">
+        <div class="title-main"><div class="title"><ul><li>F</li><li>O</li><li>O</li><li>D</li><li>I</li><li>E</li><li>S</li></ul></div> </div>
+        <div class="sidebar-links">
+                <div class="inside-sidebar-links">
+                    <li>
+                        <i class="fa fa-home home" style="color:green"></i> &nbsp;<a (click)="home()">Home</a>
+                    </li>
+                    <li class="content-pages">
+                        <a data-target="#contentPages" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Contents</a>
+                            <ul class="collapse" id="contentPages">
+                                
+                                <li><i class=" fas fa-hotel" style="color:  #ffef96;"></i>&nbsp;
+                                    <a (click)="getRestaurant()" >Restaurant</a>
+                                </li>
+                                <li><i class="fa fa-list-alt category" style="color:  #ffef96;" aria-hidden="true"></i>&nbsp;
+                                    <a (click)="getCategories()">Restaurant Categories</a>
+                                </li>
+                                <li><i class="fa fa-list-alt subcategory" style="color:  #ffef96;"></i>&nbsp;
+                                    <a (click)="getBookings()">Bookings</a>
+                                </li>
+                                <li><i class="fas fa-user-edit" style="color:  #ffef96;" aria-hidden="true"></i>&nbsp;
+                                    <a (click)="getUsers()">Users</a>
+                                </li>
+                            </ul>
+                    </li>
+                    <li class="pages">
+                        <a data-target="#pages" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Work Place</a>
+                            <ul class="collapse" id="pages">
+                                <li><i style="color:  #ffef96;" class=" add-item fa fa-edit"></i>&nbsp;
+                                    <a  (click)="addRestaurant()">Add Restaurant</a>
+                                </li>
+                                <li><i  style="color:  #ffef96;" class=" add-category fa fa-edit"></i>&nbsp;
+                                    <a (click)="addCategory()" >Add Restaurant Category</a>
+                                </li>
+                            </ul>
+                    </li>
+        
+                    <li><i style="color: red;" class="fa fa-power-off logout"></i>&nbsp; <a (click)="logout()">Logout </a></li>
+                
+                </div>
+            </div>
+          
+       
+       
+    </nav>
+
+    <!-- content -->
+    <div class="content">
+          
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
+
+
